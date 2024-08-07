@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Django Page</title>
+   
+</head>
+
+<body>
+    {% block content %}
+    <div class="home" style=" position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%)">
+        <h1>Home page</h1>
+    </div>
+    
+    {% endblock %}
+</body>
+</head>
+</html>

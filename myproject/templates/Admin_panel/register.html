@@ -1,0 +1,47 @@
+
+{% extends "index.html" %}
+{% load bootstrap4 %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Django Page</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<style>
+    .home .contain .well{
+        box-shadow: 2px 2px 15px 0px black;
+    }
+  
+</style>
+<body>
+    {% block content %}
+    {% load crispy_forms_tags %}
+    <div class="home" style=" position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%)">
+     
+        <div class="container-fluid  contain" style="margin-top:100px;">
+            <div clas="col-md-offset-4  col-md-4" >
+<h2 class="text-primary page-header text-center">User Registration</h2>
+            </div>
+            <div clas="col-md-offset-4  col-md-4 well"  >
+                <form method="POST" autocomplete="off">
+
+
+                   {% csrf_token %}
+                    {{form.as_p}}
+                    <button type="submit" class="btn btn-primary ">Register</button>
+                </form>
+               </div>
+        </div>
+       
+   
+
+    </div>
+    
+    {% endblock %}
+</body>
+</head>
+</html>

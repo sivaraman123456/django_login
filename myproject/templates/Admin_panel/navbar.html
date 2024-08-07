@@ -1,0 +1,59 @@
+
+
+
+
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Django Page</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<style>
+    .color{
+        background-color: rgb(43, 89, 226);
+        border-color: bisque;
+        height: 40px;
+    }
+    .navbar-brand{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .navbar1 .navbar-header a{
+color:aliceblue;
+font-weight: bold;
+font-size: 18px;
+    }
+    .navbar1 .navbar-header a:hover{
+        color: rgba(254, 131, 53, 0.97);
+    }
+   .navbar1 .nav li a{
+margin-left: 20px;
+color:aliceblue;;
+
+    }
+    .navbar1 .nav li a:hover{
+        color:rgb(255, 125, 32);
+    }
+
+</style>
+<body>
+    <div class="navbar1">
+    <nav class="navbar navbar-inverse navbar-fixed-top color">
+<div class="container">
+    <div class="navbar-header">
+        <a href="#" ><i class="fa fa-users">User Registration</i></a>
+    </div>
+    <div class="nav ">
+        <li><a href="{% url 'Home' %}">Home</a></li>
+        <li><a href="{% url 'Login' %}">Login</a></li>
+        <li><a href="{% url 'Register' %}">Register</a></li>
+        <li><a href="{% url 'Signup' %}">Signup</a></li>
+        </div>
+</div>
+    </nav>
+</div>
+</body>
+</html>
